@@ -32,10 +32,10 @@ for app in app_id:
         if(cnt == 0): # if there are no reviews in the desired language, I continue otherwise it freezes
             continue
 
-            keys = dictionaries[0].keys()
+        keys = dictionaries[0].keys()
 
-            #I create a csv file for each application present in app_id
-            a_file = open(app+"_"+lan+".csv", "w")
-            dict_writer = csv.DictWriter(a_file, keys)
-            dict_writer.writeheader()
-            dict_writer.writerows(dictionaries)
+        #I create a csv file for each application present in app_id
+        a_file = open(app+"_"+lan+".csv", "w")
+        dict_writer = csv.DictWriter(a_file, keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(dictionaries)
